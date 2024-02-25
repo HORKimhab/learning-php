@@ -14,16 +14,27 @@ require_once './includes/newclass.inc.php';
 <body>
     <div class="container-fluid">
         <h1>Learning OOP PHP</h1>
-    </div>
 
-    <?php
+        <?php
         $pet01 = new Pet(); 
         $person = new Person(); 
-        echo $person->first;
+        // echo $person->first;
         // var_dump($pet01);
         echo $pet01->owner();
+        echo "<br />";
+        echo "Properties and Methods"; 
+        echo "<br />";
+        $person->setName('HKimahb');
+        echo $person->name;
+
+        echo "<br />";
+        $person->setName('SreyKhuoch');
+        echo $person->name;
 
     ?>
+    </div>
+
+   
 
    
 
