@@ -1,2 +1,2 @@
-# learning-php
+# Learning PHP
 Learning PHP
