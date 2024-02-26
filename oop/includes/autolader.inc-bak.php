@@ -10,14 +10,7 @@ function autoLoadClass($className){
         - newclass (is name of file, e.g newclass) (001)
         - Inside "newclass.class.php a class name must be the same af name of file        
     */
-
-    $url = $_SERVER["HTTP_HOST"].$_SERVER['REQUEST_URI'];
-    
-    if(strpos($url, 'includes') !== false){
-        $path = "../classes/";
-    } else {
-        $path = "classes/";
-    }
+    $path = "classes/";
     $extension = ".class.php";
     $fullPath = $path . $className . $extension;
 
@@ -25,5 +18,5 @@ function autoLoadClass($className){
     //     return false;
     // }
 
-    require_once $fullPath;
+    include_once $fullPath;
 }
