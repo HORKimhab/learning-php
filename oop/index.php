@@ -1,6 +1,5 @@
 <?php 
-// Include other_file.php
-require_once './includes/newclass.inc.php';
+include 'includes/autolader.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,20 +15,33 @@ require_once './includes/newclass.inc.php';
         <h1>Learning OOP PHP</h1>
 
         <?php
-        $pet01 = new Pet(); 
-        $person = new Person(); 
-        // echo $person->first;
-        // var_dump($pet01);
-        echo $pet01->owner();
-        echo "<br />";
-        echo "Properties and Methods"; 
-        echo "<br />";
-        $person->setName('HKimahb');
-        echo $person->name;
+        // $pet01 = new Pet(); 
+        
+        // Without Namespace
+        // $person = new Person(); 
 
-        echo "<br />";
-        $person->setName('SreyKhuoch');
-        echo $person->name;
+        // With Namespace
+        $person = new Person\Person(); 
+        // print_r($person);
+        echo $person->name; 
+        // print_r($person->name);
+
+        // echo $person->setName();
+        // var_dump($pet01);
+
+        // echo $pet01->owner();
+        // echo "<br />";
+        // echo "Properties and Methods"; 
+        // echo "<br />";
+        // $person->setName('HKimahb');
+        // echo $person->name;
+
+        // echo "<br />";
+        // $person->setName('SreyKhuoch');
+        // echo $person->name;
+
+        // $new = new newclass(); 
+        // print_r($new);
 
     ?>
     </div>
