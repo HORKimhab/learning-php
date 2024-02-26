@@ -1,4 +1,6 @@
 <?php 
+declare(strict_types=1);
+
 include 'includes/autolader.inc.php';
 ?>
 
@@ -24,6 +26,23 @@ include 'includes/autolader.inc.php';
         $person = new Person\Person(); 
         // print_r($person);
         echo $person->name; 
+        echo "<br />";
+
+        try {
+            echo $person->setName(12);
+        } catch (TypeError $e){
+            var_dump($e);
+
+            /* 
+                echo "Error Message: " . $e->getMessage() . PHP_EOL;
+                echo "Error Code: " . $e->getCode() . PHP_EOL;
+                echo "File: " . $e->getFile() . PHP_EOL;
+                echo "Line: " . $e->getLine() . PHP_EOL;
+                echo "Trace: " . PHP_EOL;
+                var_dump($e->getTrace());
+            */
+        }
+
         // print_r($person->name);
 
         // echo $person->setName();

@@ -8,7 +8,7 @@ class Person {
     public $name = "SreyKhuoch";
 
      // Methods 
-     public function setName($name){
+     public function setName(stirng $name){
         $this->name = $name;
     }
 }
