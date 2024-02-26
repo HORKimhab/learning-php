@@ -26,3 +26,5 @@ class Pet extends Person {
 
 $object = new NewClass;
 // var_dump($pet);
+
+# Constructor: https://php.watch/versions/8.0/constructor-property-promotion
